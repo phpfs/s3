@@ -9,7 +9,7 @@ ENV GOPATH /root
 
 RUN \
   apk update && \
-  apk add go git binutils libc-dev && \
+  apk add go git binutils libc-dev ca-certificates && \
   go get github.com/barnybug/s3/cmd/s3 && \
   strip /root/bin/s3 && \
   apk del go git binutils libc-dev && \
